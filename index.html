@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Lista de Tarefas</title>
+</head>
+
+
+<body>
+    
+    <div class="app">
+            <div class="container-nt">
+                <input id="novaTarefa" type="text" placeholder="Digite uma nova tarefa...">
+                <hr>
+                <button id="add"> + </button>
+                
+            </div>
+                
+            <main id="bloco">
+                <div class="lista">
+                    <input type="checkbox" name="" id="lista1">
+                    <label for="lista1">
+                        <!-- <box-icon name='checkbox' color='#636e72' ></box-icon> -->
+                        <box-icon name='check-square' type='solid' color='#636e72' ></box-icon>
+                    </label>
+                    <p>Afazeres de casa</p>
+                    <div class="btns">
+                        <box-icon name='spreadsheet' type='solid' color='#636e72' ></box-icon>
+                        <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
+                    </div>
+                </div>
+
+                <div class="lista">
+                    <input type="checkbox" name="" id="lista2">
+                    <label for="lista2">
+                        <!-- <box-icon name='checkbox' color='#636e72' ></box-icon> -->
+                        <box-icon name='check-square' type='solid' color='#636e72' ></box-icon>
+                    </label>
+                    <p>Assuntos para estudar</p>
+                    <div class="btns">
+                        <box-icon name='spreadsheet' type='solid' color='#636e72'></box-icon>
+                        <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
+                    </div>
+                </div>
+            </main>
+
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
