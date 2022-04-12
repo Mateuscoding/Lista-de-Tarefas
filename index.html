@@ -18,39 +18,64 @@
 <body>
     
     <div class="app">
+
+        <h1 class="titulo">Lista de Tarefas</h1>
             <div class="container-nt">
-                <input id="novaTarefa" type="text" placeholder="Digite uma nova tarefa...">
-                <hr>
-                <button id="add"> + </button>
+                <P>Insira uma  nova tarefa</P>
+                <input id="novaTarefa" type="text" >
+                <!-- <hr> -->
+                <span></span>
+                <button id="add">
+                    <i id="iconAdd"" class='bx bx-list-plus' style='color:white' ></i>              
+                  </button>
                 
             </div>
                 
             <main id="bloco">
-                <div class="lista">
-                    <input type="checkbox" name="" id="lista1">
-                    <label for="lista1">
-                        <!-- <box-icon name='checkbox' color='#636e72' ></box-icon> -->
-                        <box-icon name='check-square' type='solid' color='#636e72' ></box-icon>
-                    </label>
-                    <p>Afazeres de casa</p>
-                    <div class="btns">
-                        <box-icon name='spreadsheet' type='solid' color='#636e72' ></box-icon>
-                        <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
-                    </div>
-                </div>
+                <div id="detalhes" class="of">
+                    <div id="janela">
+                        <span id="salvarDetalhes" onclick="salvar()"><box-icon name='save' type='solid' color='#fdfafa' ></box-icon></span>
+                        <span id="fecharDetalhes" onclick="fecharMenu()">X</span>
+                    </div>    
+                    <div class="formatacao">
+                            <button>
+                                <box-icon class="formatar" name='bold' color="white" onclick="mudar(this)"></box-icon>
+                            </button>
+                            <button>
+                                <box-icon class="formatar" name='italic' color="white"></box-icon>
+                            </button>
+                            <button>
+                                <box-icon class="formatar" name='underline' color="white"></box-icon>
+                            </button>
+                            <button>
+                                <box-icon class="formatar" name='color-fill' color="white"></box-icon>
+                            </button>
 
-                <div class="lista">
-                    <input type="checkbox" name="" id="lista2">
-                    <label for="lista2">
-                        <!-- <box-icon name='checkbox' color='#636e72' ></box-icon> -->
-                        <box-icon name='check-square' type='solid' color='#636e72' ></box-icon>
+                            <button>
+                                <box-icon class="formatar" type='solid' name='paint' color="white"></box-icon>
+                            </button>
+                        </div>
+
+                        
+                        <!-- <hr> -->
+                        
+                        <div class="texto">
+                            <textarea id="menssagem" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                </div>
+                <!-- <div id="${qtdLista}" class="lista 1">
+                    <input class="check" type="checkbox" name="" id="1" onclick="verificarChecked(this)">
+                    <label for="1">
+                        <box-icon class="box-flex" name='checkbox' color='#636e72'></box-icon>
+
+                        <box-icon class="box-none" name='checkbox' type='solid' color='#636e72'></box-icon>
                     </label>
-                    <p>Assuntos para estudar</p>
+                    <p></p>
                     <div class="btns">
                         <box-icon name='spreadsheet' type='solid' color='#636e72'></box-icon>
                         <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
                     </div>
-                </div>
+                </div>  -->
             </main>
 
     </div>
