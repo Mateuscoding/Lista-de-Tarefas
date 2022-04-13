@@ -23,7 +23,6 @@
             <div class="container-nt">
                 <P>Insira uma  nova tarefa</P>
                 <input id="novaTarefa" type="text" >
-                <!-- <hr> -->
                 <span></span>
                 <button id="add">
                     <i id="iconAdd"" class='bx bx-list-plus' style='color:white' ></i>              
@@ -32,6 +31,8 @@
             </div>
                 
             <main id="bloco">
+
+                <!-- CABEÇARIOS EXTERIOR E INTERIOR -->
                 <div id="detalhes" class="of">
                     <div id="janela">
                         <span id="salvarDetalhes" onclick="salvar()"><box-icon name='save' type='solid' color='#fdfafa' ></box-icon></span>
@@ -55,31 +56,17 @@
                                 <box-icon class="formatar" type='solid' name='paint' color="white"></box-icon>
                             </button>
                         </div>
-
-                        
-                        <!-- <hr> -->
                         
                         <div class="texto">
-                            <textarea id="menssagem" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea id="menssagem" cols="30" rows="10"></textarea>
                         </div>
                 </div>
-                <!-- <div id="${qtdLista}" class="lista 1">
-                    <input class="check" type="checkbox" name="" id="1" onclick="verificarChecked(this)">
-                    <label for="1">
-                        <box-icon class="box-flex" name='checkbox' color='#636e72'></box-icon>
 
-                        <box-icon class="box-none" name='checkbox' type='solid' color='#636e72'></box-icon>
-                    </label>
-                    <p></p>
-                    <div class="btns">
-                        <box-icon name='spreadsheet' type='solid' color='#636e72'></box-icon>
-                        <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
-                    </div>
-                </div>  -->
+                <!-- A PARTIR DAQUI SE INICIA A ADIÇÃO DAS LISTA NO BLOCO  -->
+
             </main>
 
     </div>
-
 
     <script src="./js/script.js"></script>
 </body>

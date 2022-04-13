@@ -10,25 +10,7 @@ const iconDetalhes = document.getElementsByName('spreadsheet')
 const msg = document.querySelector('#menssagem')
 
 
-
-// BTNS de detalhes
-// formatar.forEach((icones)=>{
-
-//     console.log(icones)
-//     icones.addEventListener('click', (icone)=>{
-//         let elemento = icone.target
-//         elemento.setAttribute('animation', 'tada')
-//         console.log('foi')
-//     })
-
-//     icones.addEventListener('click', (icone)=>{
-//         let elemento = icone.target
-//         elemento.removeAttribute('animation')
-//         console.log('foi')
-//     })
-// })
-
-let listaAberta = ''
+let listaAberta = '' // Aqui ele puxa o identificador da lista que foi aberta
 
         function abrirMenu(icon){
             
@@ -48,33 +30,12 @@ let listaAberta = ''
             detalhes.style.display = 'block'
             detalhes.style.animation = 'menu'
             detalhes.style.animationDuration = '.7s'
-
-            listaAberta = idLista;
-
-            // console.log(formatar)
-            // formatar.forEach((icones)=>{
-
-            //     console.log(icones)
-            //     icones.addEventListener('click', (icone)=>{
-            //         let elemento = icone.target
-            //         elemento.setAttribute('animation', 'tada')
-            //         console.log('foi')
-            //     })
-            
-            //     icones.addEventListener('click', (icone)=>{
-            //         let elemento = icone.target
-            //         elemento.removeAttribute('animation')
-            //         console.log('foi')
-            //     })
-            // })
-
-            
+            listaAberta = idLista;          
 
         }
 
         function fecharMenu(){
             let detalhes = document.getElementById('detalhes')
-            // let msg = document.querySelector('#menssagem')
             detalhes.style.animation = 'menuoff'
             detalhes.style.animationDuration = '.7s'
 
@@ -85,30 +46,24 @@ let listaAberta = ''
             }, 400)
           
             listaAberta = ''
-
         }
 
         function salvar(){
             
             if(listaAberta >= 0){
                 listas[listaAberta].menssagem = document.querySelector('#menssagem').value   
-                
             }
         }
-// BTN de adicionar
+// BTN de adicionar - Efeito do Box Icon
     document.getElementById('novaTarefa').addEventListener("mouseover", ()=>{ 
 
         document.getElementById('iconAdd').classList.toggle('bx-flashing')
-
     })
     document.getElementById('novaTarefa').addEventListener("mouseout", ()=>{ 
 
         document.getElementById('iconAdd').classList.toggle('bx-flashing')
     })
 
-
-
-    // qtdLista
 
     let listaSeguinte = 0;
     let listas = [ ]
@@ -122,29 +77,25 @@ function addLista(){
     }
 
     listas.push({identificador: listaSeguinte, titulo: nome, checked: false, menssagem: '', posicao: `item${listaSeguinte}`, corpoHTML: `<div id="${listaSeguinte}" class="lista ${listaSeguinte}">
-    <input class="check" type="checkbox" name="" id="check${listaSeguinte}" onclick="verificarChecked(this)">
-    <label for="check${listaSeguinte}">
-        <box-icon class="box-flex" name='checkbox' color='#636e72'></box-icon>
-        <box-icon class="box-none" name='checkbox' type='solid' color='#636e72'></box-icon>
-    </label>
-    <p>${nome}</p>
-    <div class="btns">
-        <box-icon name='spreadsheet' type='solid' color='#636e72' onclick="abrirMenu(this)"></box-icon>
-        <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
-    </div>
-</div> ` })
-
+        <input class="check" type="checkbox" name="" id="check${listaSeguinte}" onclick="verificarChecked(this)">
+        <label for="check${listaSeguinte}">
+            <box-icon class="box-flex" name='checkbox' color='#636e72'></box-icon>
+            <box-icon class="box-none" name='checkbox' type='solid' color='#636e72'></box-icon>
+        </label>
+        <p>${nome}</p>
+        <div class="btns">
+            <box-icon name='spreadsheet' type='solid' color='#636e72' onclick="abrirMenu(this)"></box-icon>
+            <box-icon name='trash' color='#636e72' onclick="remover(this)"></box-icon>
+        </div>
+        </div> ` })
     
         bloco.innerHTML += listas[listaSeguinte].corpoHTML;
 
-    // console.log(listas)
     listaSeguinte++
 
     console.log(listaSeguinte)
     console.log(listas)
-    // console.log('Opa '+ o)
 }
-
 
 function remover(lixeira){
 
@@ -169,33 +120,8 @@ function remover(lixeira){
     })
 }
 
-// addDetalhes
-
-// iconDetalhes.addEventListener('click', (detalhes)=>{
-//     detalhes.forEach((elemento)=>{
-
-
-//             console.log(elemento)
-//         })
-//     })
-
-
-
-// function verificarCheck(element){
-
-//     // document.querySelectorAll('.check').forEach((elemento)=>{
-
-//     //     console.log(elemento.name)
-//     // })
-
-//     // element.name = 'check-square'
-//     // console.log(element)
-
-// }
 
 function verificarChecked(input){
-    // let div = document.getElementById('.a')
-    // div.style.borderBottomColor 
     let divLista = input.parentElement
     let label = divLista.children[1]
     let trueChecked = label.children[0]
@@ -215,17 +141,6 @@ function verificarChecked(input){
         falseChecked.classList.toggle('box-none')
         falseChecked.classList.toggle('box-flex')
     }
-
-    // for (let index = 0; index < 2; index++) {
-    //     // const element = array[index];
-
-    //     let iconeBox = label.children[index]
-        
-        
-    // }
-   
-
-    // console.log(label.children)
 
 }
  

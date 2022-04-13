@@ -7,7 +7,6 @@
 
     from{left: 0%;}
     to{left: -1500px;}
-    
 }
 
 @keyframes menu{
@@ -20,14 +19,12 @@
     100%{width: 0%; height: 0%;}
 }
 
-
 body{
     width: 100%;
     height: 100%;
     background-color: #272727;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .titulo{
     margin-top: 7%;
@@ -38,8 +35,6 @@ body{
 .app{
     width: 100%;
     height: 100vh;
-    /* background-color: #272727; */
-    /* background-color: #74b9ff; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +50,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 5px;
-    /* background-color: rgba(255, 228, 196, 0.288); */
 }
 
         .container-nt p{
@@ -67,7 +61,6 @@ body{
         #novaTarefa{
             width: 45%;
             text-align: center;
-            /* background-color: transparent; */
             color: #636e72;
             background-color: white;
             font-size: 20px;
@@ -77,8 +70,7 @@ body{
             border: 1px solid rgba(255, 255, 255, 0.623);
             padding: 10px;
             border-radius: 10px;
-            /* border-bottom: 1px white solid; */
-            /* margin: 20px; */
+
             transition: .7s;
         }
 
@@ -87,11 +79,7 @@ body{
             color: #636e72;
             background-color: white;
         }
-        /* .container-nt span{
-            width: 70px;
-            height: 1px;
-            background-color: #636e72;
-        } */
+
         #add{
             width: 100%;
             height: 40px;
@@ -104,11 +92,6 @@ body{
             border: none;
             cursor: pointer;
         }
-        #add box-icon{
-            /* width: 100%; */
-            /* height: 100%; */
-            /* background-color: white; */
-        }
 
         label{
           cursor: pointer;
@@ -120,19 +103,15 @@ body{
         }
 
 #bloco{
-    /* background-color: rgb(54, 54, 54); */
     width: 100%;
     height: 100%;
     padding: 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 5px;
 }
-
-
 
     .lista{
         width: 500px;
@@ -142,22 +121,17 @@ body{
         position: relative;
         display: flex;
         align-items: center;
-        /* justify-content: center; */
         gap: 25px;
         color: #474949 ;
-        /* border-bottom: 1px solid white; */
         border-radius: 10px;
-        /* background-color: rgba(230, 231, 230, 0); */
         margin-bottom: 5px;
         padding: 5px;
         transition: .5s;
-
     }
 
     .lista:hover{
         padding: 10px;
         transition: .5s;
-
     }
 
     .lista input[type='checkbox']{
@@ -173,19 +147,16 @@ body{
         transform: translate(-50%, -50%);
         width: 60%;
         height: 60%;
-            
         border-radius: 15px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(182, 181, 181, 0.986);
+        /* backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); */
 
         -webkit-box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.84);
         -moz-box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.84);
         box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.84);
-
         transition: 1s;
             }
-
 
     .on{
         display: block;
@@ -211,15 +182,11 @@ body{
         cursor: pointer;
         transition: .5s;
     }
-    
    
      .formatacao button:hover{
          transition: .5s;
          position: relative;
         padding: 20px;
-         /* top: -5px; */
-         /* padding: 1px; */
-        /* border-radius: 5px; */
     } 
 
     #janela{
@@ -229,10 +196,6 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* position: absolute; */
-        /* right: 10px; */
-        /* top: 10px; */
-        /* cursor: pointer; */
         color: white;
         font-weight: 700;
     }
@@ -244,7 +207,7 @@ body{
     }
     .texto{
         width: 100%;
-        height: 100%;
+        height: 400px;
         margin: 0;
         display: flex;
         justify-content: center;
@@ -252,44 +215,35 @@ body{
 
     .texto textarea{
         margin-top: 15px;
-        width: 90%;
-        height: 100%;
+        width: 95%;
+        height: 280px;
         font-size: 19px;
         font-family: Arial, Helvetica, sans-serif;
-        color: black;
+        color: #272727;
         outline: none;
         border: none;
         background-color: transparent;
-        /* text-indent: 20px; */
     }
     
    
     .box-none{
         display: none;
-
     }
 
     .box-flex{
         display: flex;
     }
 
-
-    
     .btns{
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        /* background-color: aliceblue; */
         width: 100px;
-        /* padding: 30px; */
-        /* height: 100px; */
         right: 0;
         gap: 15px;
     }
 
     .btns box-icon{
         cursor: pointer;
-        /* width: 100%;
-        height: 30px; */
     }
